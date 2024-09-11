@@ -3,6 +3,7 @@
     --cor_dois: #343a40;
     --cor_tres: #90e0ef;
     --cor_quatro: #0077b6;
+    --cor_cinco: #ffffff;
     font-family: "Comfortaa", sans-serif;
     background-color: var(--cor_um);
 }
@@ -19,6 +20,7 @@ h2{
 p{
     padding-left: 2%;
     width: 80%;
+    color: var(--cor_quatro);
 }
 
 .react_logo {
@@ -33,13 +35,15 @@ p{
 .numero_title h4{
     margin-left: 5%;
     padding-top: 2%;
-    color: var(--cor_dois);
+    color: var(--cor_cinco);
     font-size: 18px;
 }
 
 .calculadora_container{
     display: flex;
     background-color: var(--cor_tres);
+    color: var(--cor_cinco);
+    font-weight: bold;
     padding: 2%;
     padding-top: 1%;
 }
@@ -71,14 +75,11 @@ p{
     border: 2px solid var(--cor_quatro);
 }
 
-.calculadora_container button{
-    background-color: var(--cor_um);
-    border: 1px solid var(--cor_dois);
-}
 
 .operadores_aritmeticos h4{
-
+    
     padding-left: 5%;
+    color: var(--cor_quatro);
 }
 
 .operadores_aritmeticos_container{
@@ -88,4 +89,33 @@ p{
 
 .radio_inpt{
     cursor: pointer;
+}
+
+.operadores_aritmeticos_container label{
+    margin-right: 2%;
+    color: var(--cor_quatro);
+}
+
+button{
+    background-color: var(--cor_um);
+    border: 1px solid var(--cor_quatro);
+    color: var(--cor_quatro);
+    width: 100px;
+    height: 30px;
+    margin-bottom: 3%;
+    margin-left: 7%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--cor_quatro);
+    color: var(--cor_um);
+    transition: 0.5s;
+}
+
+.resultado{
+    margin-left: 7%;
+    margin-bottom: 4%;
+    color: var(--cor_quatro);
 }

@@ -23,27 +23,27 @@ function Calculadora() {
     };
     function soma(){
 
-       set_result(parseFloat(valor_primeiro_inpt) + parseFloat(valor_segundo_inpt));
+       set_result(`O resultado é: ${parseFloat(valor_primeiro_inpt) + parseFloat(valor_segundo_inpt)}.`);
     };
 
      function subtracao(){
 
-        set_result(parseFloat(valor_primeiro_inpt) - parseFloat(valor_segundo_inpt));
+        set_result(`O resultado é: ${parseFloat(valor_primeiro_inpt) - parseFloat(valor_segundo_inpt)}.`);
      };
 
      function multiplicacao(){
 
-        set_result(parseFloat(valor_primeiro_inpt) * parseFloat(valor_segundo_inpt));
+        set_result(`O resultado é: ${parseFloat(valor_primeiro_inpt) * parseFloat(valor_segundo_inpt)}.`);
      };
 
      function divisao(){
 
-        set_result(parseFloat(valor_primeiro_inpt) / parseFloat(valor_segundo_inpt));
+        set_result(`O resultado é: ${parseFloat(valor_primeiro_inpt) / parseFloat(valor_segundo_inpt)}.`);
      };
 
      function exponenciacao(){
 
-        set_result(parseFloat(valor_primeiro_inpt) ** parseFloat(valor_segundo_inpt));
+        set_result(`O resultado é: ${parseFloat(valor_primeiro_inpt) ** parseFloat(valor_segundo_inpt)}.`);
      };
 
      function escolha_de_operadores(){
@@ -87,12 +87,12 @@ function Calculadora() {
 
       <div className='alinhamento_inpt_um'>
          <label>1º Número</label>
-         <input type="text" minLength={1} maxLength={12} onChange={pegar_primeiro_inpt}/>
+         <input type="text" minLength={1} maxLength={12} onChange={pegar_primeiro_inpt} placeholder='Digite um número'/>
       </div>
 
       <div className='alinhamento_inpt_um'>
          <label>2º Número</label>
-         <input type="text" minLength={1} maxLength={12} onChange={pegar_segundo_inpt}/>
+         <input type="text" minLength={1} maxLength={12} onChange={pegar_segundo_inpt} placeholder='Digite um número'/>
       </div>
     
     </div>
@@ -125,8 +125,11 @@ function Calculadora() {
       
       </div>
     
-    <button onClick={escolha_de_operadores}>Calcular</button>
+    <button onClick={escolha_de_operadores} >Calcular</button>
+
+    <div className='resultado'>
     {result}
+    </div>
     </>
   )
 }
