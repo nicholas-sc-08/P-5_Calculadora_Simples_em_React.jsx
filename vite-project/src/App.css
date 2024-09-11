@@ -1,0 +1,91 @@
+:root{
+    --cor_um: #f5f5f5;
+    --cor_dois: #343a40;
+    --cor_tres: #90e0ef;
+    --cor_quatro: #0077b6;
+    font-family: "Comfortaa", sans-serif;
+    background-color: var(--cor_um);
+}
+
+body{
+    margin: auto;
+}
+
+h2{
+    color: var(--cor_quatro);
+    padding: 2%;
+}
+
+p{
+    padding-left: 2%;
+    width: 80%;
+}
+
+.react_logo {
+    height: 20px;
+    width: 20px;
+}
+
+.numero_title{
+    background-color: var(--cor_tres);
+}
+
+.numero_title h4{
+    margin-left: 5%;
+    padding-top: 2%;
+    color: var(--cor_dois);
+    font-size: 18px;
+}
+
+.calculadora_container{
+    display: flex;
+    background-color: var(--cor_tres);
+    padding: 2%;
+    padding-top: 1%;
+}
+
+.alinhamento_inpt_um{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    justify-content: center;
+    margin: auto;
+}
+
+.calculadora_container input{
+    width: 200px;
+    height: 30px;
+    background-color: var(--cor_um);
+    border: 1px solid var(--cor_quatro);
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.calculadora_container label{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.calculadora_container input:focus{
+    border: 2px solid var(--cor_quatro);
+}
+
+.calculadora_container button{
+    background-color: var(--cor_um);
+    border: 1px solid var(--cor_dois);
+}
+
+.operadores_aritmeticos h4{
+
+    padding-left: 5%;
+}
+
+.operadores_aritmeticos_container{
+    padding: 5%;
+    padding-top: 3%;
+}
+
+.radio_inpt{
+    cursor: pointer;
+}

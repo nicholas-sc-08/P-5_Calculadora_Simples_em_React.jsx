@@ -76,26 +76,58 @@ function Calculadora() {
             break;
         };
      };
-     console.log(result)
      return (
-    <div>
+      <>
+
+      <div className='numero_title'>
+      <h4>Números</h4>
+
+    <div className='calculadora_container'>
       
-    <input type="text" minLength={1} maxLength={12} onChange={pegar_primeiro_inpt}/>
 
-    <select value={valor_slct} onChange={pegar_valor_slct}>
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="x">x</option>
-        <option value="÷">÷</option>
-        <option value="^">^</option>
-    </select>
+      <div className='alinhamento_inpt_um'>
+         <label>1º Número</label>
+         <input type="text" minLength={1} maxLength={12} onChange={pegar_primeiro_inpt}/>
+      </div>
 
-    <input type="text" minLength={1} maxLength={12} onChange={pegar_segundo_inpt}/>
-
-    <button onClick={escolha_de_operadores}>Calcular</button>
-
-    {result}
+      <div className='alinhamento_inpt_um'>
+         <label>2º Número</label>
+         <input type="text" minLength={1} maxLength={12} onChange={pegar_segundo_inpt}/>
+      </div>
+    
     </div>
+
+    </div>
+
+      <div className='operadores_aritmeticos'>
+
+         <h4>Operadores Aritméticos</h4>
+
+         <div className='operadores_aritmeticos_container'>
+
+
+         <input type="radio" name='inpt_aritmetic'value={`+`} onChange={pegar_valor_slct} className='radio_inpt'/>
+         <label>Adicao</label>
+
+         <input type="radio" name='inpt_aritmetic' value={`-`} onChange={pegar_valor_slct} className='radio_inpt'/>
+         <label>Subtração</label>
+
+         <input type="radio" name='inpt_aritmetic'value={`x`} onChange={pegar_valor_slct} className='radio_inpt'/>
+         <label>Multiplicação</label>
+
+         <input type="radio" name='inpt_aritmetic' value={`÷`} onChange={pegar_valor_slct} className='radio_inpt'/>
+         <label>Divisão</label>
+
+         <input type="radio" name='inpt_aritmetic' value={`^`} onChange={pegar_valor_slct} className='radio_inpt'/>
+         <label>Exponenciação</label>
+         
+         </div>
+      
+      </div>
+    
+    <button onClick={escolha_de_operadores}>Calcular</button>
+    {result}
+    </>
   )
 }
 
